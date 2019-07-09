@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
 import { CursosModule } from './cursos/cursos.module';
+//Import para injetar-mos os dados dos Cursos na classe cursos.component
+import { CursosService } from './cursos/cursos.service';
 
 //Meta dados
 @NgModule({
@@ -25,7 +27,7 @@ import { CursosModule } from './cursos/cursos.module';
     CursosModule
   ],
   //Onde colocamos os serviços q ficaram disponiveis a este modulo
-  providers: [],
+  providers: [ CursosService ],
   //É o componente que sera o Principal, oque sera instanciado quando executar a aplicação.
   bootstrap: [AppComponent]
 })

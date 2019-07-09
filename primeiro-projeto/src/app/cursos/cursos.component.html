@@ -1,10 +1,21 @@
 <p>
-    <!--Entre {{ }} colocamos a variavel que inicializamos no component.ts-->
+    <!--Entre {{ }} colocamos a variavel que inicializamos no component.ts (Interpolação)-->
     Lista de cursos do portal {{ nomePortal }}
 </p>
 
 <ul>
+    <!--
+    Utilizando diretiva *ngFOR não precisamos uzar varios <li> 
     <li>Java</li>
     <li>Pyton</li>
     <li>JS</li>
+    -->
+    <!-- 
+        Ao invez de usar o metodo construtor do componente.ts podemos usar as diretivas
+        direto no corpo HTML, onde "cursos" é a variavel que recebera as posições do
+        array cursos do componente.ts, sua saida deve ser explicitada em uma variavel de
+        Interpolação, no caso {{ curso }}  -->
+    <li *ngFor="let curso of cursos">
+        {{ curso }}
+    </li>
 </ul>
