@@ -1,4 +1,5 @@
 <section class="property-binding">
+    <!-- Aula 8 Interpolação
     <article>
         <h3>Interpolation / Interpolação</h3>
         <p>String renderizada com Interpolação: {{ url }}</p>
@@ -6,14 +7,91 @@
         <p>Resultado de 1 + 1 não é = {{ 1 + 1 + getValor() }}</p>
         <p>Variavel cursoAngular e Metodo curtirCurso: {{ cursoAngular && getCurtirCurso() }}</p>
     </article>
-
+    -->
+    <!-- Aula 9 Property Binding
     <article>
         <h3>Property Binding</h3>
-        <!--Intepolação-->
+        <!--Intepolação->
         <img src="{{ urlImagem }}" alt="Fonte lorempixel">
-        <!--Property Binding resumido, syntax sugarr-->
+        <!--Property Binding resumido, syntax sugarr->
         <img [src]="urlImagem" alt="Fonte lorempixel">
-        <!--Property Binding-->
+        <!--Property Binding->
         <img bind-src="urlImagem" alt="Fonte lorempixel">
+    </article>
+    -->
+
+    <!--Aula 10 Class e Style binding-->
+    <article>
+        <h3>Class e Style Bynding</h3>
+        <div>
+            Selecione uma classe
+            <!--Cria um variave local chamada "classe" e fica escutando um evento de mudança "(change)" mas não faz nada "=0"-->
+            <select #classe (change)="0">
+                <option value="alert-primary">Primário</option>
+                <option value="alert-secondary">Secundário</option>
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-danger">Perigo</option>
+                <option value="alert-warning">Atenção</option>
+                <option value="alert-info">Informação</option>
+                <option value="alert-light">Cláro</option>
+                <option value="alert-dark">Escuro</option>
+            </select>
+            <br><br>
+            <!-- Verificar!!!
+            <alert type="success" >Sucesso</alert>
+            <alert type="info">...</alert>
+            <alert type="warning">...</alert>
+            <alert type="danger">...</alert>
+            -->
+
+            <!--Usando Interpolação no Class Binding-->
+            <div class="alert {{ classe.value }}" role="alert">
+                Estilo criado por Interpolação + Class Binding
+            </div>
+
+            <!--Class Binding-->
+            <div class="alert" role="alert" 
+                [class.alert-primary]="classe.value == 'alert-primary'">
+                Alerta Primário criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-secondary]="classe.value == 'alert-secondary'">
+                Alerta Secundário criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-success]="classe.value == 'alert-success'">
+                Alerta de Sucesso criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-danger]="classe.value == 'alert-danger'">
+                Alerta de perido criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-warning]="classe.value == 'alert-warning'">
+                Alerta criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-info]="classe.value == 'alert-info'">
+                Alerta de Informação Primário criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-light]="classe.value == 'alert-light'">
+                Alerta Cláro criado com Class Binding
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-dark]="classe.value == 'alert-dark'">
+                Alerta Escuro criado com Class Binding
+            </div>
+
+            <!--Style Binding-->
+            <!--Se classe.value for igual a alert-danger(Combo-box) então(?) o estilo da DIV vai 
+                ser o block, senão(:) não mostre nada-->
+            <div class ="alert alert-danger" role="alert"
+                [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Estilo criado por Style Binding.
+            </div>
+        </div>
+        
+
     </article>
 </section>
