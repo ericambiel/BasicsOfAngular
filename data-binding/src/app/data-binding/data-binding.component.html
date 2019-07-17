@@ -1,3 +1,4 @@
+<!-- Property-binding
 <section class="property-binding">
     <!-- Aula 8 Interpolação
     <article>
@@ -20,12 +21,13 @@
     </article>
     -->
 
-    <!--Aula 10 Class e Style binding-->
+    <!--Aula 10 Class e Style binding--
     <article>
         <h3>Class e Style Bynding</h3>
         <div>
             Selecione uma classe
-            <!--Cria um variave local chamada "classe" e fica escutando um evento de mudança "(change)" mas não faz nada "=0"-->
+            <!--Cria um variave local chamada "classe" e fica escutando um evento de mudança "(change)"
+                 mas não faz nada "=0"--
             <select #classe (change)="0">
                 <option value="alert-primary">Primário</option>
                 <option value="alert-secondary">Secundário</option>
@@ -44,12 +46,12 @@
             <alert type="danger">...</alert>
             -->
 
-            <!--Usando Interpolação no Class Binding-->
+            <!--Usando Interpolação no Class Binding--
             <div class="alert {{ classe.value }}" role="alert">
                 Estilo criado por Interpolação + Class Binding
             </div>
 
-            <!--Class Binding-->
+            <!--Class Binding--
             <div class="alert" role="alert" 
                 [class.alert-primary]="classe.value == 'alert-primary'">
                 Alerta Primário criado com Class Binding
@@ -85,13 +87,73 @@
 
             <!--Style Binding-->
             <!--Se classe.value for igual a alert-danger(Combo-box) então(?) o estilo da DIV vai 
-                ser o block, senão(:) não mostre nada-->
+                ser o block, senão(:) não mostre nada--
             <div class ="alert alert-danger" role="alert"
                 [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
                 Estilo criado por Style Binding.
             </div>
         </div>
-        
+    </article>
+</section>
+-->
 
+<!-- Event Binding
+<section class="event-binding">
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button (click)="botaoClicado()" class="btn btn-primary">Me clique</button>
+            <br><br>
+        <!--(nomedoevento)=nomedometodo ($event) para fazer referencia ao evento
+            (keyup) evento ao soltar a tecla, (keyup.enter) evento ao soltar tecla enter
+            (blur) evento quando saimos do elemento
+            #campoInput é uma variavel local que faz referencia ao $event.target --
+            <input type="text"
+              #campoInput
+              (keyup)="onKeyUp($event)"
+              (keyup.enter)="salvarValor($event.target.value)"
+              (blur)="salvarValor(campoInput.value)">
+            
+             <p>valor atual: {{ valorAtual }}</p>
+             <p>valor salvo: {{ valorSalvo }}</p>
+
+             <br>
+             <span
+              (mouseover)="onMouseOverOut()"
+              on-mouseout="onMouseOverOut()"
+              [class.highlight]="isMouseOver"
+              >Passe o mouse sobre mim.</span>
+        </div>
+    </article>
+</section>
+-->
+
+<section class="two-way-binding">
+    <article>
+        <h3>Two-way Data Binding</h3>
+        <div>
+            <!--[value] é um binding com a classe data-binding.component.ts, ou seja faz a ligação entre 
+                    html e componente
+                (input) esculta evento de presionar algum botão, $ faz referencia ao evento, 
+                    event.target.value é o local onde o valor fica armazenado na input-->
+            <input type="text"
+             [value] = "nome"
+             (input) = "nome = $event.target.value"
+            />
+            
+            <!--ngModel faz referencia a um objeto ou atributo dentro da classe de componente-->
+            <input type="text"
+             [ngModel]="nome"
+             (ngModelChange)="nome = $event"
+            />
+            
+            <!--Two-Way-DataBinding, quando tanto o evento quanto o atributo forem iguais usar como abaixo [()]-->
+            <input type="text" [(ngModel)]="nome">
+
+            <!--Forma canonica para Two-Way-DataBibding, não resumida-->
+            <input type="text" bindon-ngModel="nome">
+
+            <p>Você digitou um nome: {{ nome }}</p>
+        </div>
     </article>
 </section>
