@@ -29,6 +29,15 @@ export class DataBindingComponent implements OnInit {
   isMouseOver: boolean = false
 
   nome: string = 'abc'
+  
+  //Usaremos essa variavel em um outro componente (inpit-property) com ajuda do Input Properties
+  nomeDoCurso: string = 'Angular'
+
+  //Criando Objetos
+  pessoa: any = {
+    nome: 'def',
+    idade: 20
+  }
 
   getValor() {
     return 1

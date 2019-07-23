@@ -7,12 +7,14 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 //Bootstrap
 import { AlertModule } from 'ngx-bootstrap';
 
-import { FormsModule }   from '@angular/forms'; //Importar para funcionar o ngModel no data-binding.componente.html
+import { FormsModule }   from '@angular/forms';
+import { InputPropertyComponent } from './input-property/input-property.component'; //Importar para funcionar o ngModel no data-binding.componente.html
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropertyComponent
   ],
   imports: [
     BrowserModule,
