@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -30,8 +28,10 @@ export class DataBindingComponent implements OnInit {
 
   nome: string = 'abc'
   
-  //Usaremos essa variavel em um outro componente (inpit-property) com ajuda do Input Properties
+  //Usaremos essa variavel em um outro componente (input-property) com ajuda do Input Properties
   nomeDoCurso: string = 'Angular'
+
+  valorInicial = 10;
 
   //Criando Objetos
   pessoa: any = {

@@ -5,14 +5,16 @@ import { Component, OnInit, Input, } from '@angular/core';
   selector: 'app-curso', //Nome do componente que sera usado no HTML
   templateUrl: './input-property.component.html',
   styleUrls: ['./input-property.component.css'],
-  inputs: ['nomeCurso:nome'] //Casso queira expor de outra forma, ai é necessário remover o decorator @Input da variavel
+  //inputs: ['nomeCurso:nome'] //Caso queira expor de outra forma, ai é necessário remover o decorator @Input da variavel
 })
 export class InputPropertyComponent implements OnInit {
 
-  //@Input expoem uma propriadade desse componente para outra clase.
-  /*nome sera como sera exposta externamente (para classes e componentes), 
-    e nomeCurso como sera exposta internamente (para este arquivo)*/
-  @Input('nome') nomeCurso: string = ''
+  //@Input expoem propriadades desse componente para outra clase.
+  /*('nomeCurso') sera o nome da variavel que sera vista externamente (para classes e componentes), 
+    e nomeCurso: string como sera vista internamente (para este arquivo). Se ocultar-mos
+    o conteudo de dentro do parenteses, tanto internamente quanto externamente teremos os mesmo 
+    nome*/
+  @Input('nomeCurso') nomeCurso: string = ''
   
   constructor() { }
 

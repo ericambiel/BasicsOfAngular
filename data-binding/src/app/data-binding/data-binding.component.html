@@ -170,7 +170,13 @@
 <section class="input-output-properties">
     <article>
         <h3>Input/Output Properties</h3>
-
+        <!--nomeCurso é uma variavel da classe input-property-->
         <app-curso [nomeCurso]="nomeDoCurso "></app-curso>
+        <!--Como usamos o decorator @Input na variavel valor da classe OutputPropertyComponent podemos 
+        passar um valor=10 para a classe-->
+        <!--Valor fixo (Hard coded)-->
+        <contador valor="20"></contador>
+        <!--Se for passar um valor pelo componente devera usar property-binding []-->
+        <contador [valor]="10"></contador>
     </article>
 </section>
