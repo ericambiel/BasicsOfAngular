@@ -178,5 +178,9 @@
         <contador valor="20"></contador>
         <!--Se for passar um valor pelo componente devera usar property-binding []-->
         <contador [valor]="10"></contador>
+          
+        <contador [valor]="valorInicial"
+          (mudouValor)="onMudouValor($event)"
+        ></contador>
     </article>
 </section>
