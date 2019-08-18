@@ -13,10 +13,14 @@ import { AngularFireModule } from '@angular/fire';
 
 //Realtime database
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { EditComponent } from './contatos/edit/edit.component';
+import { ListComponent } from './contatos/list/list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
