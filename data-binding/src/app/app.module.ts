@@ -9,7 +9,8 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { FormsModule }   from '@angular/forms';
 import { InputPropertyComponent } from './input-property/input-property.component';
-import { OutputPropertyComponent } from './output-property/output-property.component'; //Importar para funcionar o ngModel no data-binding.componente.html
+import { OutputPropertyComponent } from './output-property/output-property.component';
+import { CicloComponent } from './ciclo/ciclo.component'; //Importar para funcionar o ngModel no data-binding.componente.html
 
 @NgModule({
   /* Os nomes da declaração seguem o seguinte formato
@@ -19,7 +20,8 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
     AppComponent,
     DataBindingComponent,
     InputPropertyComponent,
-    OutputPropertyComponent
+    OutputPropertyComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,
