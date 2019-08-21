@@ -1,4 +1,4 @@
-
+import { FormsModule }   from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -28,7 +28,9 @@ import { ListComponent } from './contatos/list/list.component';
     //Inicializa fire base no projeto
     AngularFireModule.initializeApp(environment.firebase),
     //Realtime database
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    //Necessario para formar a parte grafica
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
