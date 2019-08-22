@@ -24,7 +24,7 @@ export class EditComponent implements OnInit {
 
     } else {
       this.contactService.insert(this.contato)
-      this.contato = new Contact();
     }
+    this.contato = new Contact();
   }
 }

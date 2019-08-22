@@ -1,1 +1,16 @@
-<p>list works!</p>
+<!--Varre obejto contacts instanciado em para contato e fecha conexão após tarefa com o async-->
+<div class="card mt-2" *ngFor="let contact of contacts | async">
+    <div class="card-body">
+        <h5 class="card-title">{{ contact.name }}</h5>
+        <p class="card-text">{{ contact.tel }}</p>
+        <p class="card-text">{{ contact.email }}</p>
+        <p class="card-text">{{ contact.birthdate }}</p>
+        <p class="card-text">{{ contact.address }}</p>
+    </div>
+    <div class="card-footer">
+        <!--Chama metodo edit e passa objeto contato e chave do contato a ser alterado como paramentro no envento onClick do mouse-->
+        <button type="button" class="btn btn-dark" (click)="edit(contact, contact.key)">Editar</button>
+        <!--Chama metodo delete e passa chave do contato a ser apagado como paramentro no envento onClick do mouse-->
+        <button type="button" class="btn btn-danger ml-2" (click)="delete(contact.key)">Excluir</button>
+    </div>
+</div>

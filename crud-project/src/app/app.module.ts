@@ -26,7 +26,7 @@ import { ListComponent } from './contatos/list/list.component';
     BrowserModule,
     AppRoutingModule,
     //Inicializa fire base no projeto
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     //Realtime database
     AngularFireDatabaseModule,
     //Necessario para formar a parte grafica

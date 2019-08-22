@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   //Faz o link entre seu projeto e firebase, essas propriedades são adquiridas do site firebase.
-  firebase: {
+  firebaseConfig: {
     apiKey: "AIzaSyDh9zXdsUNcr0EyVFpvHKJZtNe5TgtF7kw",
     authDomain: "crud-ericambiel.firebaseapp.com",
     databaseURL: "https://crud-ericambiel.firebaseio.com",
     projectId: "crud-ericambiel",
-    storageBucket: "",
+    storageBucket: "crud-ericambiel.appspot.com",
     messagingSenderId: "692275453898",
     appId: "1:692275453898:web:5218945a17381b03"
   }
