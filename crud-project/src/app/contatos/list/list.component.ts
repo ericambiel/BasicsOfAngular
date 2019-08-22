@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
   }
 
   delete(key: string) {
-
+    this.contactService.delete(key)
   }
 
   //

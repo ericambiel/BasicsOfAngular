@@ -35,7 +35,8 @@ export class ContactService {
   }
 
   delete(key: string) {
-    //Chama o metodo remove do objeto db e passa como paremetro a key do dado a ser removida
+    /*Chama o metodo remove do objeto db e passa como paremetro 
+    a o caminho(contact/) e key do dado a ser removida*/
     this.db.object(`contact/${key}`).remove();
   }
 
