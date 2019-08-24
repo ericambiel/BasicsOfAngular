@@ -175,12 +175,12 @@
         <!--Como usamos o decorator @Input na variavel valor da classe OutputPropertyComponent podemos 
         passar um valor=10 para a classe-->
         <!--Valor fixo (Hard coded)-->
-        <contador valor="20"></contador>
+        <app-contador valor="20"></app-contador>
         <!--Se for passar um valor pelo componente devera usar property-binding []-->
-        <contador [valor]="10"></contador>
+        <app-contador [valor]="10"></app-contador>
           
-        <contador [valor]="valorInicial"
+        <app-contador [valor]="valorInicial"
           (mudouValor)="onMudouValor($event)"
-        ></contador>
+        ></app-contador>
     </article>
 </section>

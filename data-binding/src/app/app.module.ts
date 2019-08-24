@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 
-//Bootstrap
+// Bootstrap
 import { AlertModule } from 'ngx-bootstrap';
 
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { InputPropertyComponent } from './input-property/input-property.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
-import { CicloComponent } from './ciclo/ciclo.component'; //Importar para funcionar o ngModel no data-binding.componente.html
+import { CicloComponent } from './ciclo/ciclo.component'; // Importar para funcionar o ngModel no data-binding.componente.html
 
 @NgModule({
   /* Os nomes da declaração seguem o seguinte formato
@@ -26,7 +26,7 @@ import { CicloComponent } from './ciclo/ciclo.component'; //Importar para funcio
   imports: [
     BrowserModule,
     AlertModule.forRoot(),
-    FormsModule //Importar para funcionar o ngModel no componente.html
+    FormsModule // Importar para funcionar o ngModel no componente.html
   ],
   providers: [],
   bootstrap: [AppComponent]
