@@ -1,5 +1,7 @@
 <div>
     <button class="btn btn-primary" (click)="decrementa()">-</button>
-    <input type="text" [value]="valor" readonly> <!--readonly trava o campo para edição-->
+    <!--Forma de declarar variavel local referenciando um elemento HTML
+        é usando um #nomeVariavel. -->
+    <input type="text" [value]="valor" readonly #campoInput> <!--readonly trava o campo para edição-->
     <button class="btn btn-primary" (click)="incrementa()">+</button>
 </div>

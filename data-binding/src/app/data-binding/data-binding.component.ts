@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  //styleUrls: ['./data-binding.component.css']
+  // styleUrls: ['./data-binding.component.css']
   /*Metadado Style, templete in-line, pode se usado quando temos somente uma classe, caso contra 
   usar styleUrls*/
   styles: [
@@ -19,55 +19,56 @@ export class DataBindingComponent implements OnInit {
 
   url: string = 'https://www.linkedin.com/in/ericambiel/'
   urlImagem: any = 'http://lorempixel.com/400/200/'
-  cursoAngular: boolean = true
+  cursoAngular: boolean = true;
 
-  valorAtual: string = ''
-  valorSalvo: string = ''
+  valorAtual: string = '';
+  valorSalvo: string = '';
 
-  isMouseOver: boolean = false
+  isMouseOver: boolean = false;
 
-  nome: string = 'abc'
-  
-  //Usaremos essa variavel em um outro componente (input-property) com ajuda do Input Properties
-  nomeDoCurso: string = 'Angular'
+  nome: string = 'abc';
 
-  valorInicial = 10;
+  // Usaremos essa variavel em um outro componente (input-property) com ajuda do Input Properties
+  nomeDoCurso: string = 'Angular';
 
-  //Criando Objetos
+  valorInicial = 20;
+
+  // Criando Objetos
   pessoa: any = {
     nome: 'def',
     idade: 20
-  }
+  };
 
   getValor() {
-    return 1
+    return 1;
   }
 
   getCurtirCurso() {
-    return true
+    return true;
 
   }
 
-  botaoClicado(){
-    alert("Botão clicado!!!")
+  botaoClicado() {
+    alert('Botão clicado!!!');
   }
 
-  onKeyUp(evento :KeyboardEvent){
-    //HTMLInputElement é uma interface do typeScript que nos ajuda nas conversões
-    //console.log((<HTMLInputElement>evento.target).value)
-    this.valorAtual = (<HTMLInputElement>evento.target).value
+  onKeyUp(evento: KeyboardEvent) {
+    // HTMLInputElement é uma interface do typeScript que nos ajuda nas conversões
+    // console.log((<HTMLInputElement>evento.target).value)
+    // this.valorAtual = (<HTMLInputElement>evento.target).value;
+    this.valorAtual = (evento.target as HTMLInputElement).value;
   }
 
-  salvarValor(evento){
-    this.valorSalvo = evento
+  salvarValor(evento) {
+    this.valorSalvo = evento;
   }
 
-  onMouseOverOut(){
-    this.isMouseOver = !this.isMouseOver
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
   onMudouValor(evento) {
-    console.log(evento.novoValor)
+    console.log(evento.novoValor);
   }
 
   constructor() { }
