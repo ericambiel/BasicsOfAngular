@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">Diretiva-ngSwitch</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"
+          [class.active]="aba == 'home'"
+          (click)="aba = 'home'">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+          [class.active]="aba == 'mapa'"
+          (click)="aba = 'mapa'">Mapa</a>
+      </li>
+      <li class="nav-item"
+          [class.active]="aba == 'lista'"
+          (click)="aba = 'lista'">
+        <a class="nav-link">Lista</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container" [ngSwitch]="aba">
+  <div *ngSwitchCase="'mapa'">Modo mapa ativado</div>
+  <div *ngSwitchCase="'lista'">Modo lista ativado</div>
+  <div *ngSwitchDefault>Modo home ativado</div>
+</div>
